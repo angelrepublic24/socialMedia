@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import avatar from "../../../assets/img/user.png"
 import useAuth from "../../../hooks/useAuth";
@@ -33,17 +34,17 @@ export const Nav = () => {
 
       <ul className="container-lists__list-end">
         <li className="list-end__item">
-          <a href="#" className="list-end__link-image">
-            {auth.avatar != 'defaul.png' && <img src={Global.url+"user/avatar/"+auth.avatar} className="list-end__img" alt="Imagen de perfil"/>}
-            {auth.avatar == 'defaul.png' && <img src={avatar} className="list-end__img" alt="Imagen de perfil"/>}
+          <NavLink to={"profile/"+auth._id} className="list-end__link-image">
+            {auth.avatar != 'default.png' && <img src={Global.url+"user/avatar/"+auth.avatar} className="list-end__img" alt="Imagen de perfil"/>}
+            {auth.avatar == 'default.png' && <img src={avatar} className="list-end__img" alt="Imagen de perfil"/>}
 
             
-          </a>
+          </NavLink>
         </li>
         <li className="list-end__item">
-          <a href="#" className="list-end__link">
+          <NavLink to={"profile/"+auth._id} className="list-end__link">
             <span className="list-end__name">{auth.name}</span>
-          </a>
+          </NavLink>
         </li>
         <li className="list-end__item">
           <NavLink to="setting" className="list-end__link">

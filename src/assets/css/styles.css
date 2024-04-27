@@ -173,6 +173,9 @@ body {
     line-height: 1.5;
     cursor: pointer;
 }
+/* content__button--right{
+    float: right;
+} */
 
 
 .content__button:hover, .content__btn-more-post:hover {
@@ -251,10 +254,18 @@ body {
     border-color: var(--color-border-btn-delete);
 }
 
-
 .post__button:hover{
     background-color: var(--color-background-btn-delete-hover);
     border-color: var(--color-border-btn-delete-hover);
+}
+
+.post__button--green{
+    background-color: var(--color-background-btn-success);
+    border-color: var(--color-border-btn-success);
+}
+.post__button--green:hover{
+    background-color: var(--color-background-btn-success-hover);
+    border-color: var(--color-border-btn-success-hover);
 }
 
 .content__container-btn{

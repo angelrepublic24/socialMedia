@@ -5,6 +5,7 @@ import { Sidebar } from './Sidebar'
 import useAuth from '../../../hooks/useAuth'
 
 export const PrivateLayout = () => {
+  let token = localStorage.getItem('token')
   const {auth} = useAuth();
   return (
     <>
@@ -15,7 +16,7 @@ export const PrivateLayout = () => {
 
         {/* Main Content */}
         <section className='layout_content'>
-          {auth._id ? 
+          {token ? 
             <Outlet />
             :
             <Navigate to="/login"/>

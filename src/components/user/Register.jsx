@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import { Global } from "../../helpers/Global";
@@ -22,7 +23,6 @@ export const Register = () => {
     });
 
     const data = await request.json();
-    console.log(data);
 
     if(data.status === "success"){
       setSaved('saved');

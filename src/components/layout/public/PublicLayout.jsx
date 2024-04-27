@@ -4,6 +4,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 import useAuth from '../../../hooks/useAuth'
 
 export const PublicLayout = () => {
+  let token = localStorage.getItem('token')
   const {auth} = useAuth();
   return (
     <>
@@ -12,7 +13,7 @@ export const PublicLayout = () => {
 
         {/* Main Content */}
         <section className='layout_content'>
-          {!auth._id ? 
+          {!token ? 
             <Outlet />
             :
             <Navigate to='/social'/>

@@ -41,7 +41,6 @@ export const AuthProvider = ({children}) => {
             }
         });
         const dataCounter = await requestCounters.json()
-
         // set state
         setAuth(data.user);
         setCounter(dataCounter);

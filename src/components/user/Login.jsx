@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import {Global} from "../../helpers/Global"
 import {useForm} from "../../hooks/useForm"
@@ -22,8 +23,6 @@ export const Login = () => {
       }
     })
     const data = await request.json();
-    console.log(data);
-
     if(data.status === 'success') {
       // keep data on the navigation
       localStorage.setItem("token", data.token);
